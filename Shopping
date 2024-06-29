@@ -1,0 +1,20 @@
+from colorama import init
+from colorama import Fore, Back, Style
+init()
+
+
+
+shop_list = []
+
+print(Fore.BLUE + "Составьте свой список покупок")
+product = input("Что вы хотите купить: ")
+
+# shop_list.append(product)
+while product != "стоп":
+    shop_list.append(product)
+    product = input("Что вы хотите купить: ")
+
+
+shop_list.sort()
+
+print(Fore.RED + "Вам нужно купить: ", shop_list)
